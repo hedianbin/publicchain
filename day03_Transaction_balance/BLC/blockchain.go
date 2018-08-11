@@ -128,11 +128,11 @@ func (blc *Blockchain) Printchain() {
 		fmt.Printf("Nonce:%d\n", block.Nonce)
 		fmt.Println("Txs:")
 		for _, tx := range block.Txs {
-			fmt.Printf("TxHash:%x\n", tx.TxHash)
+			fmt.Printf("TxID:%x\n", tx.TxHash)
 			fmt.Println("Vins:")
 			for _, in := range tx.Vins {
 				//已经花掉的钱的交易的hash
-				fmt.Printf("\tTxHash:%x\n", in.Txid)
+				fmt.Printf("\tTxID:%x\n", in.Txid)
 				//in.Vout，代表要消费的某一个TXOutput当前数组里面的索引
 				fmt.Printf("\tVout:%d\n", in.Vout)
 				//名字，谁的钱被消费掉了

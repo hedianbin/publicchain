@@ -92,5 +92,4 @@ func (ws *Wallets) SaveToFile(nodeID string) {
 	if err!=nil{
 		log.Panic(err)
 	}
-
 }
